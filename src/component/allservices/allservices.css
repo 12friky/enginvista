@@ -1,0 +1,260 @@
+.services-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .breadcrumb {
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+  }
+  
+  .breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .breadcrumb a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  .breadcrumb span {
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .services-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 20px;
+  }
+  
+  .services-header h1 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  
+  .services-header p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+  
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  
+  .service-item {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .service-content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    align-items: start;
+  }
+  
+  .service-text {
+    padding-right: 20px;
+  }
+  
+  .service-title {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-weight: 600;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 15px;
+  }
+  
+  .service-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+  
+  .service-detailed {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.7;
+  }
+  
+  .service-benefits {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .service-benefits h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .service-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .service-benefits li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  .service-benefits li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  .service-additional {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.7;
+    font-style: italic;
+    border-left: 3px solid #007bff;
+    padding-left: 20px;
+    margin-top: 25px;
+  }
+  
+  .service-image {
+    position: sticky;
+    top: 100px;
+  }
+  
+  .service-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .service-img:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Animation for service items */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .service-item {
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  .service-item:nth-child(odd) {
+    animation-delay: 0.1s;
+  }
+  
+  .service-item:nth-child(even) {
+    animation-delay: 0.2s;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 968px) {
+    .service-content-wrapper {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    
+    .service-text {
+      padding-right: 0;
+    }
+    
+    .service-image {
+      position: static;
+      order: -1;
+    }
+    
+    .service-img {
+      max-width: 500px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .services-page {
+      padding: 20px 15px;
+    }
+  
+    .services-header h1 {
+      font-size: 2.2rem;
+    }
+  
+    .services-header p {
+      font-size: 1.1rem;
+    }
+    
+    .service-title {
+      font-size: 1.8rem;
+    }
+    
+    .services-list {
+      gap: 60px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .breadcrumb {
+      font-size: 12px;
+    }
+  
+    .services-header h1 {
+      font-size: 1.8rem;
+    }
+    
+    .service-title {
+      font-size: 1.6rem;
+    }
+    
+    .service-description,
+    .service-detailed,
+    .service-additional {
+      font-size: 0.95rem;
+    }
+    
+    .service-benefits {
+      padding: 15px;
+    }
+  }
+  
+  /* Smooth scrolling for hash links */
+  html {
+    scroll-behavior: smooth;
+  }

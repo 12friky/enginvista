@@ -1,0 +1,174 @@
+/* -------------------------------
+   FULL BACKGROUND THAT GROWS WITH CONTENT
+----------------------------------*/
+.contact-section {
+    width: 100%;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("../../assets/images/slide2.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 120px 0; /* equal spacing top/bottom */
+    position: relative;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Overlay grows with content */
+.contact-overlay {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+/* Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.contact-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    color: #dbeafe;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+/* GRID LAYOUT */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* LEFT SIDE - CONTACT INFO */
+.contact-info {
+    color: white;
+}
+
+.section-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.detail-title {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.detail-content {
+    color: #d1d5db;
+    font-size: 1rem;
+    margin: 3px 0;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+    background: #25D366;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* -------------------------------
+   RIGHT SIDE - FORM + MAP
+----------------------------------*/
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* space between form and map */
+}
+
+.form-card {
+    background: white;
+    padding: 35px 30px; /* slightly smaller padding to reduce height */
+    border-radius: 12px;
+    box-shadow: 0px 10px 35px rgba(0,0,0,0.25);
+}
+
+/* iframe for form and map */
+.form-card iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Form Inputs */
+.form-label {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.submit-button {
+    background: black;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* -------------------------------
+   RESPONSIVE DESIGN
+----------------------------------*/
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* stack left and right */
+        gap: 40px;
+    }
+    .contact-right {
+        gap: 20px;
+    }
+    .contact-title {
+        font-size: 2.4rem;
+    }
+    .contact-subtitle {
+        font-size: 1rem;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 80px 0;
+    }
+    .section-title {
+        font-size: 1.6rem;
+    }
+}
