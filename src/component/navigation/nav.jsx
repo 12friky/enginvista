@@ -36,13 +36,33 @@ export default function Navbar() {
     document.body.style.overflow = open ? "hidden" : "unset";
   }, [open]);
 
-  const toggleDropdown = (label) => {
+  const toggleDropdown = (e, label) => {
+    e.preventDefault();
+    e.stopPropagation();
     setActiveDropdown(activeDropdown === label ? null : label);
   };
 
   const closeMenu = () => {
     setOpen(false);
     setActiveDropdown(null);
+  };
+
+  const handleServiceClick = () => {
+    navigate('/services');
+    closeMenu();
+  };
+
+  const handleMobileServiceClick = () => {
+    // On mobile, only navigate if dropdown is not active
+    if (activeDropdown !== "SERVICES") {
+      handleServiceClick();
+    }
+  };
+
+  const handleMobileDropdownToggle = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleDropdown(e, "SERVICES");
   };
 
   // Handle smooth scroll to section on home page
@@ -184,19 +204,20 @@ export default function Navbar() {
                   <div className={`dropdown ${activeDropdown === item.label ? "active" : ""}`}>
                     
                     <div className="dropdown-header">
+                      {/* Desktop: Click text to navigate, arrow for dropdown */}
                       <Link
                         to={item.href}
                         className="dropdown-main-link"
-                        onClick={closeMenu}
+                        onClick={window.innerWidth > 768 ? handleServiceClick : handleMobileServiceClick}
                       >
                         {item.label}
                       </Link>
 
                       <button
                         className="dropdown-toggle"
-                        onClick={() => toggleDropdown(item.label)}
+                        onClick={(e) => window.innerWidth > 768 ? toggleDropdown(e, item.label) : handleMobileDropdownToggle(e)}
                       >
-                        ▼
+                        ›
                       </button>
                     </div>
 

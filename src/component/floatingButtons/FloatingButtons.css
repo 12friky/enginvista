@@ -1,5 +1,5 @@
 /* WhatsApp Button - Fixed Left */
-.floating-whatsapp-btn {
+.vistaview-whatsapp-btn {
   position: fixed;
   left: 20px;
   bottom: 20px;
@@ -18,17 +18,17 @@
   color: white;
 }
 
-.floating-whatsapp-btn:hover {
+.vistaview-whatsapp-btn:hover {
   background: #20BA5A;
   transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
 }
 
-.floating-whatsapp-btn:active {
+.vistaview-whatsapp-btn:active {
   transform: scale(0.95);
 }
 
-.whatsapp-tooltip {
+.vistaview-whatsapp-tooltip {
   position: absolute;
   right: 70px;
   background: #333;
@@ -42,11 +42,11 @@
   transition: opacity 0.3s ease;
 }
 
-.floating-whatsapp-btn:hover .whatsapp-tooltip {
+.vistaview-whatsapp-btn:hover .vistaview-whatsapp-tooltip {
   opacity: 1;
 }
 
-.whatsapp-tooltip::after {
+.vistaview-whatsapp-tooltip::after {
   content: '';
   position: absolute;
   right: -5px;
@@ -57,7 +57,7 @@
 }
 
 /* Scroll to Top Button - Fixed Right */
-.floating-scroll-top-btn {
+.vistaview-scroll-top-btn {
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -66,28 +66,39 @@
   background: #0d3b8e;
   border: none;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1001; /* Higher than WhatsApp button */
   box-shadow: 0 4px 12px rgba(13, 59, 142, 0.4);
   transition: all 0.3s ease;
   color: white;
-  animation: fadeInUp 0.3s ease;
+  animation: vistaview-fadeInUp 0.3s ease;
+  overflow: visible;
 }
 
-.floating-scroll-top-btn:hover {
+.scroll-arrow-icon {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  display: block;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.vistaview-scroll-top-btn:hover {
   background: #1e56b0;
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(13, 59, 142, 0.6);
 }
 
-.floating-scroll-top-btn:active {
+.vistaview-scroll-top-btn:active {
   transform: translateY(-2px);
 }
 
-@keyframes fadeInUp {
+@keyframes vistaview-fadeInUp {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -100,72 +111,73 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  .floating-whatsapp-btn {
+  .vistaview-whatsapp-btn {
     width: 55px;
     height: 55px;
     left: 15px;
     bottom: 15px;
+    z-index: 1002;
   }
 
-  .floating-scroll-top-btn {
+  .vistaview-scroll-top-btn {
     width: 45px;
     height: 45px;
     right: 15px;
     bottom: 15px;
+    background: #0d3b8e !important;
+    box-shadow: 0 4px 12px rgba(13, 59, 142, 0.4) !important;
+    z-index: 1003;
+    border: none !important;
   }
 
-  .whatsapp-tooltip {
+  .vistaview-whatsapp-tooltip {
     display: none;
   }
 
-  .floating-whatsapp-btn svg,
-  .floating-scroll-top-btn svg {
+  .vistaview-whatsapp-btn svg {
     width: 20px;
     height: 20px;
+  }
+  
+  .scroll-arrow-icon {
+    font-size: 24px !important;
+    color: white !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 }
 
 @media (max-width: 480px) {
-  .floating-whatsapp-btn {
+  .vistaview-whatsapp-btn {
     width: 50px;
     height: 50px;
     left: 10px;
     bottom: 10px;
+    z-index: 1002;
   }
 
-  .floating-scroll-top-btn {
+  .vistaview-scroll-top-btn {
     width: 40px;
     height: 40px;
     right: 10px;
     bottom: 10px;
+    background: #0d3b8e !important;
+    box-shadow: 0 4px 12px rgba(13, 59, 142, 0.4) !important;
+    z-index: 1003;
+    border: none !important;
   }
 
-  .floating-whatsapp-btn svg,
-  .floating-scroll-top-btn svg {
+  .vistaview-whatsapp-btn svg {
     width: 18px;
     height: 18px;
   }
-}
-
-/* Ensure buttons don't overlap with footer on mobile */
-@media (max-width: 768px) {
-  .floating-whatsapp-btn {
-    bottom: 90px;
-  }
   
-  .floating-scroll-top-btn {
-    bottom: 90px;
+  .scroll-arrow-icon {
+    font-size: 20px !important;
+    color: white !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 }
-
-/* Prevent buttons from overlapping navigation on very small screens */
-@media (max-width: 480px) {
-  .floating-whatsapp-btn {
-    bottom: 80px;
-  }
-  
-  .floating-scroll-top-btn {
-    bottom: 80px;
-  }
-}
-

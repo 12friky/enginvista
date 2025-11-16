@@ -13,7 +13,7 @@ const HeroSlider = () => {
   const slides = [
     {
       id: 1,
-      image: Slide1, // Remove curly braces - just use the variable directly
+      image: Slide1,
       title: "Professional Land Surveying",
       description: "Accurate and reliable land surveying services for all your construction and development needs",
       ctaText: "Get Survey Quote",
@@ -21,7 +21,7 @@ const HeroSlider = () => {
     },
     {
       id: 2,
-      image: Slide2, // Remove curly braces
+      image: Slide2,
       title: "Precision Site Planning",
       description: "Comprehensive site planning solutions to ensure your project starts on the right foundation",
       ctaText: "View Services",
@@ -29,7 +29,7 @@ const HeroSlider = () => {
     },
     {
       id: 3,
-      image: Slide3, // Remove curly braces
+      image: Slide3,
       title: "Expert Demarcation Services",
       description: "Professional boundary demarcation to protect your property rights and investments",
       ctaText: "Learn More",
@@ -37,7 +37,7 @@ const HeroSlider = () => {
     },
     {
       id: 4,
-      image: Slide4, // Remove curly braces
+      image: Slide4,
       title: "Advanced Topographic Surveys",
       description: "Detailed topographic mapping for engineering and construction projects",
       ctaText: "Our Projects",
@@ -45,7 +45,7 @@ const HeroSlider = () => {
     },
     {
       id: 5,
-      image: Slide5, // Remove curly braces
+      image: Slide5,
       title: "Trusted Since 2010",
       description: "Over a decade of excellence in surveying and geospatial solutions",
       ctaText: "Contact Us",
@@ -112,15 +112,13 @@ const HeroSlider = () => {
         ))}
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - UPDATED with React text arrows */}
       <button 
         className="nav-arrow prev-arrow" 
         onClick={prevSlide}
         aria-label="Previous slide"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+        ‹ {/* Left arrow character */}
       </button>
       
       <button 
@@ -128,9 +126,7 @@ const HeroSlider = () => {
         onClick={nextSlide}
         aria-label="Next slide"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+        › {/* Right arrow character */}
       </button>
 
       {/* Slide Indicators */}
