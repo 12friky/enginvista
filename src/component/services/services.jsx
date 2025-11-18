@@ -4,7 +4,7 @@ import "./services.css";
 import Image1 from "../../assets/images/dronSurvery.jpg";
 import Image2 from "../../assets/images/enginsurvey.jpeg";
 import Image3 from "../../assets/images/cadastary.jpg";
-import Image4 from "../../assets/images/boundary.avif";
+import Image4 from "../../assets/images/design2.jpeg";
 import Image5 from "../../assets/images/mindsurvey.jpg";
 import Image6 from "../../assets/images/gisAndMapping.jpg";
 import Image7 from "../../assets/images/site1.jpeg";

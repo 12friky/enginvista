@@ -22,7 +22,7 @@ const FloatingButtons = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const whatsappLink = "https://wa.me/233599422525";
+    const whatsappLink = "https://wa.me/233509581314";
     window.open(whatsappLink, "_blank");
   };
 

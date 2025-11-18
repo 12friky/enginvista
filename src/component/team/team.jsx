@@ -3,7 +3,7 @@ import "./team.css";
 
 // Import local team member images
 import AsomaniWilliams from "../../assets/images/image2.jpg";
-import JosephCharway from "../../assets/images/image1.jpg";
+import JosephCharway from "../../assets/images/beatrice affunu.jpg";
 import ChristabelBoohemaa from "../../assets/images/enginlady.jpeg";
 
 const Team = () => {
@@ -11,23 +11,27 @@ const Team = () => {
     {
       name: "Alhassan Abdulai",
       position: "Principal Surveyor & Founder",
-      experience: "5+ years experience in cadastral surveying",
+      experience: "With years of experience in cadastral surveying",
       image: AsomaniWilliams,
       social: {
-        linkedin: "#",
-        twitter: "#",
-        email: "#"
+        linkedin: "https://www.linkedin.com/company/vistaview-engineering-consult/",
+        twitter: "https://x.com/vistavieweng?t=WtiIIUGa8FPkhwLt4cUvcw&s=09",
+        email: "vistaviewengineering@gmail.com",
+        facebook: "https://www.facebook.com/profile.php?id=61583598580572"
+
       }
     },
     {
-      name: "Joseph Charway",
-      position: "GIS Specialist",
-      experience: "Expert in spatial data analysis",
+      name: "Beatrice Affum Konadu",
+      position: "Makerting manager",
+      experience: "Spatial planning and Gis specialist, sustainability advocate, surveyor, Drone pilot",
       image: JosephCharway,
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/beatrice-affum-konadu-3aa049336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         twitter: "#",
-        email: "#"
+        email: "#",
+        facebook: "#"
+
       }
     },
     {
@@ -38,7 +42,9 @@ const Team = () => {
       social: {
         linkedin: "#",
         twitter: "#",
-        email: "#"
+        email: "#",
+        facebook: "#"
+
       }
     }
   ];
@@ -87,6 +93,12 @@ const Team = () => {
                         <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/>
                       </svg>
                     </a>
+                    <a href={member.social.facebook} className="team-social-link">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="team-social-icon">
+    <path d="M22.675 0h-21.35C.597 0 0 .597 0 1.333v21.333C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.797.143v3.24l-1.92.001c-1.504 0-1.797.715-1.797 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.117C23.403 24 24 23.403 24 22.667V1.333C24 .597 23.403 0 22.675 0z"/>
+  </svg>
+</a>
+
                   </div>
                 </div>
               </div>

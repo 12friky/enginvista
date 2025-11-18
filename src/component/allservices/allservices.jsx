@@ -8,7 +8,7 @@ import DroneSurveyImg from '../../assets/images/dronSurvery.jpg';
 import MineSurveyImg from '../../assets/images/mindsurvey.jpg';
 import ArchitecturalDesignImg from '../../assets/images/indenture.avif';
 import GISMappingImg from '../../assets/images/gisAndMapping.jpg';
-import BoundaryLocationImg from '../../assets/images/boundary.avif';
+import BoundaryLocationImg from '../../assets/images/boundary.jpeg';
 import ConsultationImg from '../../assets/images/construction.png';
 
 const ServicesPage = () => {

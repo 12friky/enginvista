@@ -3,7 +3,7 @@ import "./contact.css";
 
 const Contact = () => {
   const handleWhatsAppClick = () => {
-    const whatsappLink = "https://wa.me/0246406528";
+    const whatsappLink = "https://wa.me/233509581314";
     window.open(whatsappLink, "_blank");
   };
 
@@ -26,17 +26,28 @@ const Contact = () => {
                 </p>
 
                 <div className="contact-details">
-                  <div className="contact-item">
-                    <h3 className="detail-title">Phone</h3>
-                    <p className="detail-content">0246406528</p>
-                    <p className="detail-content">0509581314</p>
-                    {/* <p className="detail-content">9209 937 138</p> */}
-                  </div>
+                <div className="contact-item">
+    <h3 className="detail-title">Phone</h3>
+    <p className="detail-content">
+      <a href="tel:0246406528" className="phone-link">0246406528</a>
+    </p>
+    <p className="detail-content">
+      <a href="tel:0509581314" className="phone-link">0509581314</a>
+    </p>
+    {/* <p className="detail-content">
+      <a href="tel:0209507138" className="phone-link">0209 507 138</a>
+    </p> */}
+  </div>
 
                   <div className="contact-item">
-                    <h3 className="detail-title">Email</h3>
-                    <p className="detail-content">abdulai.alh8989@gmail.com</p>
-                  </div>
+  <h3 className="detail-title">Email</h3>
+  <p className="detail-content">
+    <a href="mailto:vistaviewengineering@gmail.com" className="email-link">
+      vistaviewengineering@gmail.com
+    </a>
+  </p>
+</div>
+
 
                   <div className="contact-item">
                     <h3 className="detail-title">Office</h3>
@@ -66,7 +77,7 @@ const Contact = () => {
                   <div className="divider"></div>
                   <iframe
                     title="Contact Form"
-                    src="https://form.jotform.com/253185293865064"
+                    src="https://form.jotform.com/253206046936053"
                     width="100%"
                     height="400"
                     frameBorder="0"

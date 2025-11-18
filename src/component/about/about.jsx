@@ -8,7 +8,7 @@ const About = () => {
   
   // Stats data with target values
   const stats = [
-    { number: 5, label: "Years Experience" },
+    { number: 2, label: "Years Experience" },
     { number: 50, label: "Projects Completed" },
     { number: 98, label: "Client Satisfaction" },
     { number: 25, label: "Professional Staff" }

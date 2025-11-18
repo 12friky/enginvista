@@ -155,19 +155,29 @@ export default function Navbar() {
           <div className="contact-info">
             <span className="phone">
               <span className="contact-icon">📞</span>
-              +233 (0)246406528 | +233 509581314 
+              {/* clickable phone links */}
+              <a href="tel:+233246406528" className="contact-link" aria-label="Call +233 246 406 528">
+                +233 (0)246406528
+              </a>
+              {" | "}
+              <a href="tel:+233509581314" className="contact-link" aria-label="Call +233 509 581 314">
+                +233 509581314
+              </a>
             </span>
             <span className="email">
               <span className="contact-icon">✉️</span>
-              info@abdulai.alh8989@gmail.com
+              {/* clickable email link */}
+              <a href="mailto:info@vistaviewengineering@gmail.com" className="contact-link" aria-label="Email vistaview engineering">
+                info@vistaviewengineering@gmail.com
+              </a>
             </span>
           </div>
 
           <div className="social-links">
             <span className="social-text">Follow us:</span>
-            <a href="#" className="social-link">📘</a>
-            <a href="#" className="social-link">🐦</a>
-            <a href="#" className="social-link">💼</a>
+            <a href="https://www.facebook.com/profile.php?id=61583598580572" className="social-link">📘</a>
+            <a href="https://www.linkedin.com/company/vistaview-engineering-consult/" className="social-link">🐦</a>
+            <a href="https://x.com/vistavieweng?t=WtiIIUGa8FPkhwLt4cUvcw&s=09" className="social-link">💼</a>
           </div>
         </div>
       </div>
@@ -181,7 +191,8 @@ export default function Navbar() {
           <div className="nav-left">
             <Link to="/" className="logo-link" onClick={closeMenu}>
               <img src={Logo} className="logo" alt="VistaView Consult" />
-              <span className="company-name2">VISTAVIEW CONSULT</span>
+              <span className="company-name2"> Vistaview Engineering Consult
+              </span>
             </Link>
           </div>
 
