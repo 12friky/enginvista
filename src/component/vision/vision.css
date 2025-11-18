@@ -1,0 +1,143 @@
+.mvv-section {
+    padding: 60px 10%;
+    text-align: center;
+  }
+  
+  /* TOP SECTION — MISSION & VISION */
+  .mvv-top {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 120px;
+    margin-bottom: 60px;
+  }
+  
+  .mvv-item {
+    width: 260px;
+  }
+  
+  /* ICON STYLE */
+  .mvv-icon {
+    width: 95px;
+    height: 100px;
+    background: #f5f4ff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    margin: 0 auto 18px auto;
+    box-shadow: 0px 4px 18px rgba(100, 80, 255, 0.2);
+  }
+  
+  /* TITLES & TEXT */
+  .mvv-title, .value-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .mvv-text, .value-text {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.7;
+  }
+  
+  /* VALUES HEADER */
+  .values-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .values-header hr {
+    width: 200px;
+    margin: 10px auto 40px auto;
+    border: 1px solid #aaa;
+  }
+  
+  /* VALUES ROW */
+  .values-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 100px;
+  }
+  
+  .value-card {
+    width: 260px;
+  }
+  
+  /* ======================================== */
+  /*           RESPONSIVE SECTION             */
+  /* ======================================== */
+  
+  /* TABLETS (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .mvv-top {
+      gap: 60px;
+    }
+  
+    .values-row {
+      gap: 60px;
+    }
+  }
+  
+  /* SMALL TABLETS AND LARGE PHONES (max-width: 768px) */
+  @media (max-width: 768px) {
+    .mvv-top,
+    .values-row {
+      flex-direction: column;
+      gap: 45px;
+    }
+  
+    .mvv-item,
+    .value-card {
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+  
+    .mvv-icon {
+      width: 80px;
+      height: 80px;
+      font-size: 30px;
+    }
+  
+    .mvv-title,
+    .value-title {
+      font-size: 20px;
+    }
+  
+    .mvv-text,
+    .value-text {
+      font-size: 14px;
+    }
+  }
+  
+  /* MOBILE PHONES (max-width: 480px) */
+  @media (max-width: 480px) {
+    .mvv-section {
+      padding: 40px 6%;
+    }
+  
+    .mvv-icon {
+      width: 70px;
+      height: 70px;
+      font-size: 26px;
+    }
+  
+    .mvv-title,
+    .value-title {
+      font-size: 18px;
+    }
+  
+    .values-header h2 {
+      font-size: 26px;
+    }
+  
+    .values-header hr {
+      width: 150px;
+    }
+  }
+  

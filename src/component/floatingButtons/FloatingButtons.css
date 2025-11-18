@@ -1,0 +1,183 @@
+/* WhatsApp Button - Fixed Left */
+.vistaview-whatsapp-btn {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.vistaview-whatsapp-btn:hover {
+  background: #20BA5A;
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.vistaview-whatsapp-btn:active {
+  transform: scale(0.95);
+}
+
+.vistaview-whatsapp-tooltip {
+  position: absolute;
+  right: 70px;
+  background: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.vistaview-whatsapp-btn:hover .vistaview-whatsapp-tooltip {
+  opacity: 1;
+}
+
+.vistaview-whatsapp-tooltip::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-left-color: #333;
+}
+
+/* Scroll to Top Button - Fixed Right */
+.vistaview-scroll-top-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background: #0d3b8e;
+  border: none;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer;
+  z-index: 1001; /* Higher than WhatsApp button */
+  box-shadow: 0 4px 12px rgba(13, 59, 142, 0.4);
+  transition: all 0.3s ease;
+  color: white;
+  animation: vistaview-fadeInUp 0.3s ease;
+  overflow: visible;
+}
+
+.scroll-arrow-icon {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1;
+  display: block;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.vistaview-scroll-top-btn:hover {
+  background: #1e56b0;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(13, 59, 142, 0.6);
+}
+
+.vistaview-scroll-top-btn:active {
+  transform: translateY(-2px);
+}
+
+@keyframes vistaview-fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .vistaview-whatsapp-btn {
+    width: 55px;
+    height: 55px;
+    left: 15px;
+    bottom: 15px;
+    z-index: 1002;
+  }
+
+  .vistaview-scroll-top-btn {
+    width: 45px;
+    height: 45px;
+    right: 15px;
+    bottom: 15px;
+    background: #0d3b8e !important;
+    box-shadow: 0 4px 12px rgba(13, 59, 142, 0.4) !important;
+    z-index: 1003;
+    border: none !important;
+  }
+
+  .vistaview-whatsapp-tooltip {
+    display: none;
+  }
+
+  .vistaview-whatsapp-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .scroll-arrow-icon {
+    font-size: 24px !important;
+    color: white !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .vistaview-whatsapp-btn {
+    width: 50px;
+    height: 50px;
+    left: 10px;
+    bottom: 10px;
+    z-index: 1002;
+  }
+
+  .vistaview-scroll-top-btn {
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    bottom: 10px;
+    background: #0d3b8e !important;
+    box-shadow: 0 4px 12px rgba(13, 59, 142, 0.4) !important;
+    z-index: 1003;
+    border: none !important;
+  }
+
+  .vistaview-whatsapp-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .scroll-arrow-icon {
+    font-size: 20px !important;
+    color: white !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}

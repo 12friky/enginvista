@@ -1,0 +1,309 @@
+/* -------------------------------
+   FULL BACKGROUND THAT GROWS WITH CONTENT
+----------------------------------*/
+.contact-section {
+    width: 100%;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("../../assets/images/slide2.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 120px 0; /* equal spacing top/bottom */
+    position: relative;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Overlay grows with content */
+.contact-overlay {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+/* Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.email-link {
+    color: inherit;       /* keeps the text color same as surrounding text */
+    text-decoration: none; /* removes underline */
+  }
+  .phone-link {
+    color: inherit;        /* keeps text color same as surrounding text */
+    text-decoration: none; /* removes underline */
+  }
+  
+  .phone-link:hover {
+    text-decoration: underline; /* optional hover effect */
+    opacity: 0.8;               /* subtle hover effect */
+  }
+  
+  .email-link:hover {
+    text-decoration: underline; /* optional hover effect */
+    opacity: 0.8;               /* subtle hover effect */
+  }
+  
+/* Header */
+.contact-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    color: #dbeafe;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+/* GRID LAYOUT */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* LEFT SIDE - CONTACT INFO */
+.contact-info {
+    color: white;
+}
+
+.section-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.detail-title {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.detail-content {
+    color: #d1d5db;
+    font-size: 1rem;
+    margin: 3px 0;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+    background: #25D366;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* -------------------------------
+   RIGHT SIDE - FORM + MAP
+----------------------------------*/
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* space between form and map */
+}
+
+.form-card {
+    background: white;
+    padding: 35px 30px; /* slightly smaller padding to reduce height */
+    border-radius: 12px;
+    box-shadow: 0px 10px 35px rgba(0,0,0,0.25);
+}
+
+/* iframe for form and map */
+.form-card iframe {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Form Inputs */
+.form-label {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    width: 100%;
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.submit-button {
+    background: black;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* -------------------------------
+   RESPONSIVE DESIGN
+----------------------------------*/
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* stack left and right */
+        gap: 40px;
+    }
+    .contact-right {
+        gap: 20px;
+    }
+    .contact-title {
+        font-size: 2.4rem;
+    }
+    .contact-subtitle {
+        font-size: 1rem;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 60px 0;
+        background-attachment: scroll;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .contact-title {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+    
+    .contact-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 40px;
+    }
+    
+    .contact-grid {
+        gap: 30px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .detail-title {
+        font-size: 1rem;
+    }
+    
+    .detail-content {
+        font-size: 0.9rem;
+    }
+    
+    .form-card {
+        padding: 25px 20px;
+    }
+    
+    .form-card iframe {
+        height: 400px !important;
+    }
+    
+    .contact-right .form-card:last-child iframe {
+        height: 250px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 50px 0;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+    
+    .contact-title {
+        font-size: 1.75rem;
+    }
+    
+    .contact-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+    }
+    
+    .contact-grid {
+        gap: 25px;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .detail-title {
+        font-size: 0.95rem;
+    }
+    
+    .detail-content {
+        font-size: 0.85rem;
+    }
+    
+    .contact-details {
+        gap: 20px;
+    }
+    
+    .contact-item {
+        margin-bottom: 20px;
+    }
+    
+    .whatsapp-button {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .form-card {
+        padding: 20px 15px;
+    }
+    
+    .form-card iframe {
+        height: 350px !important;
+    }
+    
+    .contact-right .form-card:last-child iframe {
+        height: 200px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .contact-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.2rem;
+    }
+    
+    .form-card {
+        padding: 15px 10px;
+    }
+}
