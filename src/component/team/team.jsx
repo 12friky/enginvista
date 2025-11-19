@@ -4,7 +4,7 @@ import "./team.css";
 // Import local team member images
 import AsomaniWilliams from "../../assets/images/image2.jpg";
 import JosephCharway from "../../assets/images/beatrice affunu.jpg";
-import ChristabelBoohemaa from "../../assets/images/enginlady.jpeg";
+import ChristabelBoohemaa from "../../assets/images/nice-guy.jpg";
 
 const Team = () => {
   const teamMembers = [
@@ -33,12 +33,12 @@ const Team = () => {
       }
     },
     {
-      name: "Christabel Boohemaa",
-      position: "Chief Architect & PRO",
-      experience: "Geomatic engineer specializing in sustainable building design",
+      name: "Godfred Bosea",
+      position: "PRO of the firm",
+      experience: "Geomatic Engineer",
       image: ChristabelBoohemaa,
       social: {
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/godfred-takyi-482672234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         twitter: "#",
         email: "#",
         facebook: "#"
