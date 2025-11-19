@@ -2,22 +2,23 @@ import React, { useState, useEffect, useRef } from "react";
 import "./about.css";
 import AboutImage from "../../assets/images/image2.jpg";
 
+const STATS = [
+  { number: 2, label: "Years Experience" },
+  { number: 50, label: "Projects Completed" },
+  { number: 98, label: "Client Satisfaction" },
+  { number: 25, label: "Professional Staff" }
+];
+
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
-  
-  // Stats data with target values
-  const stats = [
-    { number: '', label: "With years of Experience" },
-    { number: 50, label: "Projects Completed" },
-    { number: 98, label: "Client Satisfaction" },
-    { number: 25, label: "Professional Staff" }
-  ];
 
-  const [animatedStats, setAnimatedStats] = useState(stats.map(stat => ({
-    ...stat,
-    currentNumber: 0
-  })));
+  const [animatedStats, setAnimatedStats] = useState(() =>
+    STATS.map((stat) => ({
+      ...stat,
+      currentNumber: 0
+    }))
+  );
 
   // Intersection Observer to detect when section is in view
   useEffect(() => {
@@ -33,13 +34,15 @@ const About = () => {
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    const sectionElement = sectionRef.current;
+
+    if (sectionElement) {
+      observer.observe(sectionElement);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (sectionElement) {
+        observer.unobserve(sectionElement);
       }
     };
   }, []);
@@ -60,7 +63,7 @@ const About = () => {
       
       const progress = frame / totalFrames;
       
-      const updatedStats = stats.map((stat) => {
+      const updatedStats = STATS.map((stat) => {
         // For percentage, we want to count to the exact number
         if (stat.label.includes("Satisfaction")) {
           return {
@@ -88,7 +91,7 @@ const About = () => {
       if (frame >= totalFrames) {
         clearInterval(counter);
         // Ensure final numbers are exact
-        setAnimatedStats(stats.map(stat => ({
+        setAnimatedStats(STATS.map(stat => ({
           ...stat,
           currentNumber: stat.number
         })));
@@ -132,7 +135,7 @@ const About = () => {
                 {animatedStats.map((stat, index) => (
                   <div key={index} className="stat-item">
                     <span className="stat-number">
-                      {stat.label.includes("Satisfaction") ? `${stat.currentNumber}%` : `${stat.currentNumber}`}
+                      {stat.label.includes("Satisfaction") ? `${stat.currentNumber}%` : `${stat.currentNumber}+`}
                     </span>
                     <span className="stat-label">{stat.label}</span>
                   </div>

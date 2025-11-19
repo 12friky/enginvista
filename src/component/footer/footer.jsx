@@ -167,7 +167,15 @@ const Footer = () => {
                 © 2025 VistaView Engineering consult. All Rights Reserved.
               </p>
               <p className="developer-credit">
-                Website designed and developed by <a className="iskoLink" href="www.tiktok.com/@bhraa_phranxis">isko Tech</a>
+                Website designed and developed by{" "}
+                <a
+                  className="iskoLink"
+                  href="https://www.tiktok.com/@bhraa_phranxis"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Isko Tech
+                </a>
               </p>
             </div>
           </div>

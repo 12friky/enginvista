@@ -62,10 +62,16 @@
     color: #d1d5db;
     margin: 0;
   }
-  .iskoLink{
-    color: red;
+  
+  .iskoLink {
+    color: #3b82f6;
     text-decoration: none;
     line-height: 2;
+  }
+
+  .iskoLink:hover {
+    text-decoration: underline;
+    opacity: 0.85;
   }
   
   .social-links {

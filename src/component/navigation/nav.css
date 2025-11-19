@@ -35,6 +35,20 @@
   font-size: 8px;
 }
 
+/* FIX BLUE LINKS (GLOBAL) */
+.phone a,
+.email a {
+  color: inherit !important;
+  text-decoration: none;
+  font: inherit;
+}
+
+.phone a:hover,
+.email a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
 .phone, .email {
   transition: opacity 0.3s ease;
 }
@@ -351,10 +365,6 @@
     padding: 0 15px;
   }
 
-  .logo {
-    /* Smaller logo on mobile */
-  }
-
   .company-name2 {
     display: none;
   }
@@ -443,16 +453,14 @@
   }
 
   .contact-link {
-  color: inherit !important;
-  text-decoration: none;
-  
-}
+    color: inherit !important;
+    text-decoration: none;
+  }
 
-.contact-link:hover {
-  text-decoration: underline;
-  opacity: 0.8;
-}
-
+  .contact-link:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
 
   .dropdown.active .dropdown-menu {
     display: block;
