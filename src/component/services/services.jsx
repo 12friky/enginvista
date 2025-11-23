@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./services.css";
 
 import Image1 from "../../assets/images/dronSurvery.jpg";
@@ -43,6 +44,9 @@ export default function Services() {
             and registration. Our cadastral surveys comply with all GIS and Lands
             Commission standards in Ghana.
           </p>
+          <Link to="/services#cadastral-survey" className="read-more-btns">
+            Read More
+          </Link>
         </div>
 
         {/* Engineering Survey */}
@@ -59,6 +63,9 @@ export default function Services() {
             building layouts, setting out, and structural alignment to ensure
             engineering accuracy from start to finish.
           </p>
+          <Link to="/services#engineering-survey" className="read-more-btns">
+            Read More
+          </Link>
         </div>
 
         {/* Drone Survey */}
@@ -75,6 +82,9 @@ export default function Services() {
             elevation data, providing fast and reliable insights for large land
             areas and development planning.
           </p>
+          <Link to="/services#drone-survey" className="read-more-btns">
+            Read More
+          </Link>
         </div>
 
         {/* Mine Survey */}
@@ -90,6 +100,9 @@ export default function Services() {
             Professional mine surveying for exploration, excavation monitoring,
             volume measurement, and safety compliance within mining operations.
           </p>
+          <Link to="/services#mine-survey" className="read-more-btns">
+            Read More
+          </Link>
         </div>
 
         {/* Architectural Design */}
@@ -105,6 +118,9 @@ export default function Services() {
             Creative and functional building design services including floor plans,
             3D visualizations, and structural layouts tailored to client needs.
           </p>
+          <Link to="/services#architectural-design" className="read-more-btns">
+            Read More
+          </Link>
         </div>
 
         {/* GIS and Mapping */}
@@ -120,6 +136,9 @@ export default function Services() {
             Advanced mapping services using GIS technology for spatial analysis,
             map creation, land use planning, and data visualization.
           </p>
+          <Link to="/services#gis-mapping" className="read-more-btns">
+            Read More
+          </Link>
         </div>
 
         {/* Site/Boundary Location */}
@@ -136,6 +155,9 @@ export default function Services() {
             traditional surveying methods to prevent disputes and support land
             development.
           </p>
+          <Link to="/services#boundary-location" className="read-more-btns">
+            Read More
+          </Link>
         </div>
 
         {/* Consultation Works */}
@@ -152,6 +174,9 @@ export default function Services() {
             documentation processes, project planning, and professional guidance
             for both individuals and companies.
           </p>
+          <Link to="/services#consultation" className="read-more-btns">
+            Read More
+          </Link>
         </div>
 
       </div>

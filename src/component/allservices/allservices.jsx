@@ -6,9 +6,11 @@ import CadastralSurveyImg from '../../assets/images/cadastary.jpg';
 import EngineeringSurveyImg from '../../assets/images/ingineeringSurvey.jpg';
 import DroneSurveyImg from '../../assets/images/dronSurvery.jpg';
 import MineSurveyImg from '../../assets/images/mindsurvey.jpg';
-import ArchitecturalDesignImg from '../../assets/images/indenture.avif';
+import ArchitecturalDesignImg from '../../assets/images/model.jpg';
 import GISMappingImg from '../../assets/images/gisAndMapping.jpg';
-import BoundaryLocationImg from '../../assets/images/boundary.jpeg';
+import BoundaryLocationImg from '../../assets/images/project-three.jpg';
+import SitePlane from '../../assets/images/site-plan.png';
+
 import ConsultationImg from '../../assets/images/construction.png';
 
 const ServicesPage = () => {
