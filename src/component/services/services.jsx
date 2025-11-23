@@ -7,7 +7,7 @@ import Image3 from "../../assets/images/cadastary.jpg";
 import Image4 from "../../assets/images/design2.jpeg";
 import Image5 from "../../assets/images/mindsurvey.jpg";
 import Image6 from "../../assets/images/gisAndMapping.jpg";
-import Image7 from "../../assets/images/site1.jpeg";
+import Image7 from "../../assets/images/site-plan.png";
 import Image8 from "../../assets/images/consultant.jpeg";
 
 
@@ -31,7 +31,12 @@ export default function Services() {
 
         {/* Cadastral Survey */}
         <div className="service-card">
-          <img src={Image3} alt="Cadastral Survey" />
+          <img 
+            src={Image3} 
+            alt="Cadastral Survey" 
+            loading="lazy"
+            decoding="async"
+          />
           <h3>Cadastral Survey</h3>
           <p>
             We deliver accurate boundary surveys for land ownership, documentation,
@@ -42,7 +47,12 @@ export default function Services() {
 
         {/* Engineering Survey */}
         <div className="service-card">
-          <img src={Image2} alt="Engineering Survey" />
+          <img 
+            src={Image2} 
+            alt="Engineering Survey" 
+            loading="lazy"
+            decoding="async"
+          />
           <h3>Engineering Survey</h3>
           <p>
             High-precision surveying for construction projects, road works,
@@ -53,7 +63,12 @@ export default function Services() {
 
         {/* Drone Survey */}
         <div className="service-card">
-          <img src={Image1} alt="Drone Survey" />
+          <img 
+            src={Image1} 
+            alt="Drone Survey" 
+            loading="lazy"
+            decoding="async"
+          />
           <h3>Drone Survey</h3>
           <p>
             We utilize drone technology to capture aerial maps, 3D models, and
@@ -64,7 +79,12 @@ export default function Services() {
 
         {/* Mine Survey */}
         <div className="service-card">
-          <img src={Image5} alt="Mine Survey" />
+          <img 
+            src={Image5} 
+            alt="Mine Survey" 
+            loading="lazy"
+            decoding="async"
+          />
           <h3>Mine Survey</h3>
           <p>
             Professional mine surveying for exploration, excavation monitoring,
@@ -74,7 +94,12 @@ export default function Services() {
 
         {/* Architectural Design */}
         <div className="service-card">
-          <img src={Image4} alt="Architectural Design" />
+          <img 
+            src={Image4} 
+            alt="Architectural Design" 
+            loading="lazy"
+            decoding="async"
+          />
           <h3>Architectural Design</h3>
           <p>
             Creative and functional building design services including floor plans,
@@ -84,7 +109,12 @@ export default function Services() {
 
         {/* GIS and Mapping */}
         <div className="service-card">
-          <img src={Image6} alt="GIS and Mapping" />
+          <img 
+            src={Image6} 
+            alt="GIS and Mapping" 
+            loading="lazy"
+            decoding="async"
+          />
           <h3>GIS and Mapping</h3>
           <p>
             Advanced mapping services using GIS technology for spatial analysis,
@@ -94,7 +124,12 @@ export default function Services() {
 
         {/* Site/Boundary Location */}
         <div className="service-card">
-          <img src={Image7} alt="Boundary Location" />
+          <img 
+            src={Image7} 
+            alt="Boundary Location" 
+            loading="lazy"
+            decoding="async"
+          />
           <h3>Site / Boundary Location</h3>
           <p>
             Accurate physical demarcation of land boundaries using GPS and
@@ -105,7 +140,12 @@ export default function Services() {
 
         {/* Consultation Works */}
         <div className="service-card">
-          <img src={Image8} alt="Consultation Works" />
+          <img 
+            src={Image8} 
+            alt="Consultation Works" 
+            loading="lazy"
+            decoding="async"
+          />
           <h3>Consultation Works</h3>
           <p>
             Expert advisory services on land issues, engineering projects,

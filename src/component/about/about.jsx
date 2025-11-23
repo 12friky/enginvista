@@ -112,6 +112,8 @@ const About = () => {
                 src={AboutImage} 
                 alt="A-M Surveys Limited Office" 
                 className="about-image"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 

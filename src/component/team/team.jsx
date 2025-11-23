@@ -5,6 +5,8 @@ import "./team.css";
 import AsomaniWilliams from "../../assets/images/image2.jpg";
 import JosephCharway from "../../assets/images/beatrice affunu.jpg";
 import ChristabelBoohemaa from "../../assets/images/nice-guy.jpg";
+import BrifhtAppiah from "../../assets/images/fourth-team.jpg";
+
 
 const Team = () => {
   const teamMembers = [
@@ -43,6 +45,18 @@ const Team = () => {
         email: "#",
         facebook: "#"
       }
+    },
+    {
+      name: "Bright Appiah",
+      position: "Operations manager",
+      experience: "Geomatic Engineer",
+      image: BrifhtAppiah,
+      social: {
+        linkedin: "https://www.linkedin.com/in/godfred-takyi-482672234?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        twitter: "#",
+        email: "#",
+        facebook: "#"
+      }
     }
   ];
 
@@ -66,6 +80,8 @@ const Team = () => {
                     src={member.image}
                     alt={member.name}
                     className="member-photo"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 

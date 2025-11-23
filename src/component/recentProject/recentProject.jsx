@@ -2,9 +2,9 @@ import React from "react";
 import "./recentProject.css";
 
 // Import your project images - replace these with your actual images
-import Project1 from "../../assets/images/recent1.jpeg";
+import Project1 from "../../assets/images/project-one.jpg";
 import Project2 from "../../assets/images/gisAndMapping.jpg";
-import Project3 from "../../assets/images/landSurvey.jpg";
+import Project3 from "../../assets/images/project-three.jpg";
 import Project4 from "../../assets/images/recent2.avif";
 import Project5 from "../../assets/images/ingineeringSurvey.jpg";
 import Project6 from "../../assets/images/recent3.jpeg";
@@ -34,6 +34,8 @@ const RecentProjects = () => {
                   src={project.image} 
                   alt={project.title}
                   className="project-image"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="project-overlay">
                   <h3 className="project-title">{project.title}</h3>

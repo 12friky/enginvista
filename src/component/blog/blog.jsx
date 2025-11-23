@@ -5,7 +5,7 @@ import SurveyTech from '../../assets/images/cadastary.jpg';
 import PropertyBoundaries from '../../assets/images/ingineeringSurvey.jpg';
 import DroneMapping from '../../assets/images/dronSurvery.jpg';
 import GISApplications from '../../assets/images/mindsurvey.jpg';
-import ConstructionSurvey from '../../assets/images/indenture.avif';
+import ConstructionSurvey from '../../assets/images/model.jpg';
 import MiningSurvey from '../../assets/images/gisAndMapping.jpg';
 import BlogHero from '../../assets/images/slide2.jpg';
 import UrbanPlanning from '../../assets/images/guy2.jpeg';
@@ -146,7 +146,12 @@ const BlogPage = () => {
           <p>Expert insights, industry trends, and technical knowledge from Ghana's leading surveying and engineering consultancy</p>
         </div>
         <div className="hero-image">
-          <img src={BlogHero} alt="Surveying and Engineering Insights" />
+          <img 
+            src={BlogHero} 
+            alt="Surveying and Engineering Insights" 
+            loading="eager"
+            fetchPriority="high"
+          />
         </div>
       </section>
 
@@ -157,7 +162,12 @@ const BlogPage = () => {
           {featuredPosts.map(post => (
             <article key={post.id} className="featured-card">
               <div className="featured-image">
-                <img src={post.image} alt={post.title} />
+                <img 
+                  src={post.image} 
+                  alt={post.title} 
+                  loading="lazy"
+                  decoding="async"
+                />
                 <span className="category-tag">{categories.find(cat => cat.id === post.category)?.name}</span>
               </div>
               <div className="featured-content">
@@ -223,7 +233,12 @@ const BlogPage = () => {
             {filteredPosts.map(post => (
               <article key={post.id} className="post-card">
                 <div className="post-image">
-                  <img src={post.image} alt={post.title} />
+                  <img 
+                    src={post.image} 
+                    alt={post.title} 
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <span className="category-badge">{categories.find(cat => cat.id === post.category)?.name}</span>
                 </div>
                 <div className="post-content">

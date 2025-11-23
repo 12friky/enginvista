@@ -190,7 +190,13 @@ export default function Navbar() {
         <div className="container">
           <div className="nav-left">
             <Link to="/" className="logo-link" onClick={closeMenu}>
-              <img src={Logo} className="logo" alt="VistaView Consult" />
+              <img 
+                src={Logo} 
+                className="logo" 
+                alt="VistaView Consult" 
+                loading="eager"
+                fetchPriority="high"
+              />
               <span className="company-name2"> Vistaview Engineering Consult
               </span>
             </Link>

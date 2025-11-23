@@ -73,6 +73,8 @@ const Testimonials = () => {
                       src={testimonial.image} 
                       alt={testimonial.author}
                       className="client-photo"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <div className="testimonial-text">

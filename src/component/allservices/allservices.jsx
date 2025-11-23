@@ -192,6 +192,8 @@ const ServicesPage = () => {
                   src={service.image} 
                   alt={service.title}
                   className="service-img"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>

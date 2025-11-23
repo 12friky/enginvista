@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import "./hero.css";
 import Slide1 from "../../assets/images/slide1.jpg";
 import Slide2 from "../../assets/images/slide2.jpg";
@@ -10,7 +10,7 @@ const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const slides = [
+  const slides = useMemo(() => [
     {
       id: 1,
       image: Slide1,
@@ -46,12 +46,12 @@ const HeroSlider = () => {
     {
       id: 5,
       image: Slide5,
-      title: "Trusted Since 2010",
+      title: "It has been trusted for many years",
       description: "Over a decade of excellence in surveying and geospatial solutions",
       ctaText: "Contact Us",
       ctaLink: "#contact"
     }
-  ];
+  ], []);
 
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
@@ -60,6 +60,39 @@ const HeroSlider = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
+
+  // Preload critical first slide image on mount
+  useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = Slide1;
+    link.fetchPriority = 'high';
+    document.head.appendChild(link);
+    
+    // Preload next slide for smoother transitions
+    const link2 = document.createElement('link');
+    link2.rel = 'preload';
+    link2.as = 'image';
+    link2.href = Slide2;
+    document.head.appendChild(link2);
+    
+    return () => {
+      if (document.head.contains(link)) document.head.removeChild(link);
+      if (document.head.contains(link2)) document.head.removeChild(link2);
+    };
+  }, []);
+
+  // Preload next slide images for smoother transitions
+  useEffect(() => {
+    const preloadImages = () => {
+      const nextIndex = (currentSlide + 1) % slides.length;
+      const nextSlideImage = slides[nextIndex].image;
+      const img = new Image();
+      img.src = nextSlideImage;
+    };
+    preloadImages();
+  }, [currentSlide, slides]);
 
   // Auto-slide functionality
   useEffect(() => {
@@ -92,11 +125,20 @@ const HeroSlider = () => {
     >
       {/* Slides Container */}
       <div className="slides-container">
-        {slides.map((slide, index) => (
+        {slides.map((slide, index) => {
+          // Preload images for current and next slide
+          const isCurrentOrNext = index === currentSlide || index === (currentSlide + 1) % slides.length;
+          return (
           <div
             key={slide.id}
             className={`slide ${index === currentSlide ? "active" : ""}`}
-            style={{ backgroundImage: `url(${slide.image})` }}
+            style={{ 
+              backgroundImage: `url(${slide.image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+            data-image-loaded={isCurrentOrNext ? "true" : "false"}
           >
             <div className="slide-overlay"></div>
             <div className="slide-content">
@@ -109,7 +151,8 @@ const HeroSlider = () => {
               </div>
             </div>
           </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Navigation Arrows - UPDATED with React text arrows */}
