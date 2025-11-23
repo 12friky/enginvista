@@ -68,26 +68,27 @@
   
   /* READ MORE BUTTON */
   .read-more-btns {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    margin: 0 auto 20px auto; /* centers the button */
+    text-align: center;
+  
+    width: 110px;      /* reduced width */
+    padding: 10px 0;   /* reduced height */
+  
+    background-color: #0e4163;
     color: white;
     text-transform: uppercase;
-    margin: 0 20px 20px 20px;
-    padding: 14px 18px;
-    background-color: #0e4163;
     text-decoration: none;
+  
     border-radius: 10px;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     letter-spacing: 0.3px;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    /* box-shadow: 0 3px 10px rgba(11, 48, 74, 0.2); */
-    border: 2px solid transparent;
-    width: 150px;
+  
+    transition: 0.3s;
   }
+  
   
   /* .read-more-btn::before {
     content: '';
