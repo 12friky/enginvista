@@ -47,7 +47,7 @@ const Team = () => {
       }
     },
     {
-      name: "Bright Appiah",
+      name: " Benjamin Appiah",
       position: "Operations manager",
       experience: "Geomatic Engineer",
       image: BrifhtAppiah,
