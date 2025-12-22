@@ -12,7 +12,7 @@ const Team = () => {
   const teamMembers = [
     {
       name: "Alhassan Abdulai",
-      position: "Principal Surveyor & Founder",
+      position: "Principal Surveyor & Founder,GIS and Remote Sensing Specialist",
       experience: "With years of experience in cadastral surveying",
       image: AsomaniWilliams,
       social: {
